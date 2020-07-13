@@ -1,0 +1,2 @@
+rootProject.name='PolemyIteration1'
+include ':app'

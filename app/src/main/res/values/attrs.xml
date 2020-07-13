@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="antiAlias" format="boolean" />
+    <attr name="startAngle" format="float" />
+    <attr name="sweepAngle" format="float" />
+    <attr name="animTime" format="integer" />
+    <attr name="maxValue" format="float" />
+    <attr name="value" format="float" />
+    <attr name="unit" format="string|reference" />
+    <attr name="unitSize" format="dimension" />
+    <attr name="unitColor" format="color|reference" />
+    <attr name="hint" format="string|reference" />
+    <attr name="hintSize" format="dimension" />
+    <attr name="hintColor" format="color|reference" />
+    <attr name="precision" format="integer" />
+    <attr name="valueSize" format="dimension" />
+    <attr name="valueColor" format="color|reference" />
+    <attr name="arcColor1" format="color|reference" />
+    <attr name="arcColor2" format="color|reference" />
+    <attr name="arcColor3" format="color|reference" />
+    <attr name="bgArcColor" format="color|reference" />
+    <attr name="arcWidth" format="dimension" />
+    <attr name="arcColors" format="color|reference" />
+    <attr name="textOffsetPercentInRadius" format="float" />
+    <declare-styleable name="CircleProgressBar">
+        <attr name="min_circle_radio" format="integer"/>
+        <attr name="ring_width" format="float"/>
+        <attr name="circle_color" format="color"/>
+        <attr name="max_circle_color" format="color"/>
+        <attr name="ring_normal_color" format="color"/>
+        <attr name="ring_color_select" format="integer"/>
+        <attr name="max_Value" format="integer" />
+        <attr name="Value" format="integer" />
+    </declare-styleable>
+</resources>

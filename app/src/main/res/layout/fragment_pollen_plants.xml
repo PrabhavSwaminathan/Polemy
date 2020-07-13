@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_bg"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".PollenPlants">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="10dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="10dp" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/textViewAirborneAllergies"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:text="@string/menu_pollen_plants"
+                android:textAllCaps="true"
+                android:textColor="#6BB1D6"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewAirborneAllergiesDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:text="@string/menu_pollen_plants_desc"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewAirborneAllergies" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayoutAsthma"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="30dp"
+                android:background="#B8B594">
+
+                <ImageView
+                    android:id="@+id/imageViewAsthma"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/asthmaweed"
+                    app:layout_constraintStart_toEndOf="@+id/textViewAsthmaDesc"
+                    app:layout_constraintTop_toBottomOf="@id/textViewAsthmaHead" />
+
+                <TextView
+                    android:id="@+id/textViewAsthmaDesc"
+                    android:scrollbars="vertical"
+                    android:layout_width="180dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="@string/asthma_weed_desc"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textViewAsthmaHead"
+                     />
+
+                <TextView
+                    android:id="@+id/textViewAsthmaHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/asthma_weed_heading"
+                    android:textColor="#1B3C65"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/textViewAsthmaDesc"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayoutBahia"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="#5A7A53"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/textViewBahiaDesc"
+                    android:layout_width="180dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="@string/asthma_weed_desc"
+                    android:textAlignment="viewStart"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:scrollbars="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/textViewBahiaHead"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewBahia" />
+
+                <TextView
+                    android:id="@+id/textViewBahiaHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/bahia_grass_heading"
+                    android:textAlignment="viewEnd"
+                    android:textColor="#1B3C65"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/textViewBahiaDesc"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageViewBahia"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bahiagrass"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewBahiaHead" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayoutBottle"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="#97B26B"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2">
+
+                <ImageView
+                    android:id="@+id/imageViewBottle"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bottlebrush"
+                    app:layout_constraintStart_toEndOf="@+id/textViewBottleDesc"
+                    app:layout_constraintTop_toBottomOf="@id/textViewBottleHead" />
+
+                <TextView
+                    android:id="@+id/textViewBottleDesc"
+                    android:layout_width="180dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:scrollbars="vertical"
+                    android:text="@string/asthma_weed_desc"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textViewBottleHead"/>
+
+                <TextView
+                    android:id="@+id/textViewBottleHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/bottle_brush_heading"
+                    android:textAlignment="viewStart"
+                    android:textColor="#1B3C65"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayoutCanary"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="#98A299">
+
+                <TextView
+                    android:id="@+id/textViewCanaryDesc"
+                    android:layout_width="180dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="18dp"
+                    android:scrollbars="vertical"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/asthma_weed_desc"
+                    android:textAlignment="viewStart"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    app:layout_constraintTop_toBottomOf="@id/textViewCanaryHead"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewCanary" />
+
+                <TextView
+                    android:id="@+id/textViewCanaryHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/canary_grass_heading"
+                    android:textAlignment="viewEnd"
+                    android:textColor="#1B3C65"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/textViewCanaryDesc"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageViewCanary"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/canarygrass"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewCanaryHead" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayoutCouch"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="#B8B594"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2">
+
+                <ImageView
+                    android:id="@+id/imageViewCouch"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginEnd="15dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/couchgrass"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textViewCouchDesc"
+                    app:layout_constraintTop_toBottomOf="@id/textViewCouchHead" />
+
+                <TextView
+                    android:id="@+id/textViewCouchDesc"
+                    android:layout_width="180dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:scrollbars="vertical"
+                    android:text="@string/asthma_weed_desc"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/textViewCouchHead"/>
+
+                <TextView
+                    android:id="@+id/textViewCouchHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/couch_grass_heading"
+                    android:textAlignment="viewStart"
+                    android:textColor="#1B3C65"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayoutOak"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="#5A7A53">
+
+                <TextView
+                    android:id="@+id/textViewOakDesc"
+                    android:layout_width="180dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="@string/asthma_weed_desc"
+                    android:textAlignment="viewStart"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:scrollbars="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/textViewOakHead"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewOak" />
+
+                <TextView
+                    android:id="@+id/textViewOakHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/english_oak_heading"
+                    android:textAlignment="viewEnd"
+                    android:textColor="#1B3C65"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageViewOak"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/englishoak"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewOakHead" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayoutJohnson"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="#97B26B"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2">
+
+                <ImageView
+                    android:id="@+id/imageViewJohnson"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginEnd="15dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/johnsongrass"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textViewJohnsonDesc"
+                    app:layout_constraintTop_toBottomOf="@id/textViewJohnsonHead" />
+
+                <TextView
+                    android:id="@+id/textViewJohnsonDesc"
+                    android:scrollbars="vertical"
+                    android:layout_width="180dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/asthma_weed_desc"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textViewJohnsonHead" />
+
+                <TextView
+                    android:id="@+id/textViewJohnsonHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/johnson_grass_heading"
+                    android:textAlignment="viewStart"
+                    android:textColor="#1B3C65"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayoutJune"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="#98A299">
+
+                <TextView
+                    android:id="@+id/textViewJuneDesc"
+                    android:scrollbars="vertical"
+                    android:layout_width="180dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/asthma_weed_desc"
+                    android:textAlignment="viewStart"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                   app:layout_constraintTop_toBottomOf="@id/textViewJuneHead"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewJune" />
+
+                <TextView
+                    android:id="@+id/textViewJuneHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/june_grass_heading"
+                    android:textAlignment="viewEnd"
+                    android:textColor="#1B3C65"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageViewJune"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/junegrass"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewJuneHead" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayoutOlive"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="#B8B594"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2">
+
+                <ImageView
+                    android:id="@+id/imageViewOlive"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginEnd="15dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/olivetree"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textViewOliveDesc"
+                    app:layout_constraintTop_toBottomOf="@id/textViewOliveHead" />
+
+                <TextView
+                    android:id="@+id/textViewOliveDesc"
+                    android:layout_width="180dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/asthma_weed_desc"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:scrollbars="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textViewOliveHead" />
+
+                <TextView
+                    android:id="@+id/textViewOliveHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/olive_tree_heading"
+                    android:textAlignment="viewStart"
+                    android:textColor="#1B3C65"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayoutOrchard"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="#5A7A53">
+
+                <TextView
+                    android:id="@+id/textViewOrchardDesc"
+                    android:layout_width="180dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/asthma_weed_desc"
+                    android:textAlignment="viewStart"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:scrollbars="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/textViewOrchardHead"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewOrchard" />
+
+                <TextView
+                    android:id="@+id/textViewOrchardHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/orchard_grass_heading"
+                    android:textAlignment="viewEnd"
+                    android:textColor="#1B3C65"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageViewOrchard"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/orchardgrass"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewOrchardHead" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayoutRag"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="#97B26B"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2">
+
+                <ImageView
+                    android:id="@+id/imageViewRag"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginEnd="15dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ragweed"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textViewRagDesc"
+                    app:layout_constraintTop_toBottomOf="@id/textViewRagHead" />
+
+                <TextView
+                    android:id="@+id/textViewRagDesc"
+                    android:layout_width="180dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/asthma_weed_desc"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:scrollbars="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textViewRagHead" />
+
+                <TextView
+                    android:id="@+id/textViewRagHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/ragweed_heading"
+                    android:textAlignment="viewStart"
+                    android:textColor="#1B3C65"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayoutRye"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="#98A299">
+
+                <TextView
+                    android:id="@+id/textViewRyeDesc"
+                    android:scrollbars="vertical"
+                    android:layout_width="180dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/asthma_weed_desc"
+                    android:textAlignment="viewStart"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    app:layout_constraintTop_toBottomOf="@id/textViewRyeHead"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewRye" />
+
+                <TextView
+                    android:id="@+id/textViewRyeHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/rye_grass_heading"
+                    android:textAlignment="viewEnd"
+                    android:textColor="#1B3C65"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageViewRye"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ryegrass"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewRyeHead" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayoutSilver"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="#B8B594"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2">
+
+                <ImageView
+                    android:id="@+id/imageViewSilver"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginEnd="15dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/silverbirch"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textViewSilverDesc"
+                    app:layout_constraintTop_toBottomOf="@id/textViewSilverHead" />
+
+                <TextView
+                    android:id="@+id/textViewSilverDesc"
+                    android:scrollbars="vertical"
+                    android:layout_width="180dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/asthma_weed_desc"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    app:layout_constraintTop_toBottomOf="@id/textViewSilverHead"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewSilverHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/silver_birch_heading"
+                    android:textAlignment="viewStart"
+                    android:textColor="#1B3C65"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayoutTim"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="#5A7A53">
+
+                <TextView
+                    android:id="@+id/textViewTimDesc"
+                    android:layout_width="180dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/asthma_weed_desc"
+                    android:textAlignment="viewStart"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:scrollbars="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/textViewTimHead"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewTim" />
+
+                <TextView
+                    android:id="@+id/textViewTimHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/timothy_grass_heading"
+                    android:textAlignment="viewEnd"
+                    android:textColor="#1B3C65"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageViewTim"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="15dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/timothygrass"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewTimHead" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayoutPine"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="#97B26B"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2">
+
+                <ImageView
+                    android:id="@+id/imageViewPine"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginEnd="15dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/whitecypruspine"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textViewPineDesc"
+                    app:layout_constraintTop_toBottomOf="@id/textViewPineHead" />
+
+                <TextView
+                    android:id="@+id/textViewPineDesc"
+                    android:scrollbars="vertical"
+                    android:layout_width="180dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/asthma_weed_desc"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textViewPineHead" />
+
+                <TextView
+                    android:id="@+id/textViewPineHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/white_pine_heading"
+                    android:textAlignment="viewStart"
+                    android:textColor="#1B3C65"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
